@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignupActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="421dp"
+        android:layout_height="wrap_content"
+        android:weightSum="0.2">
+
+        <TextView
+            android:layout_width="410dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="40sp"
+            android:paddingTop="30sp"
+            android:text="@string/fill_the_form_below"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="0.8"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Name"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/login_fname"
+            android:layout_width="312dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_fname_here"
+            android:paddingLeft="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Name"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/login_lname"
+            android:layout_width="312dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_last_name"
+            android:paddingLeft="10sp" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/login_address"
+                android:layout_width="226dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_your_address"
+                android:paddingLeft="10sp" />
+            <Button
+                android:id="@+id/login_open_maps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Maps"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maps Cordinates:"
+                android:layout_weight="0.2"/>
+            <EditText
+                android:id="@+id/latitude_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:hint="Latitude"/>
+            <EditText
+                android:id="@+id/longitude_show"
+                android:layout_weight="0.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Longitude"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/login_phone"
+                android:inputType="number"
+                android:layout_width="354dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter your phone number"
+                android:paddingLeft="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/login_usernm"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:hint="Pick your username"
+                android:paddingLeft="10sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/login_pass"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:hint="Pick your Password"
+                android:paddingLeft="10sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/login_submit"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

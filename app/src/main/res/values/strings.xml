@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Google Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="button_login">Login</string>
+    <string name="string_or">or</string>
+    <string name="sting_signup">SignUp</string>
+    <string name="fill_the_form_below">Fill the form below</string>
+    <string name="enter_your_fname_here">Enter your first name</string>
+    <string name="enter_your_last_name">Enter your last name</string>
+    <string name="enter_your_address">Enter your address</string>
+</resources>

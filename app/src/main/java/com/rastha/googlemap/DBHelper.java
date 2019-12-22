@@ -1,4 +1,6 @@
 package com.rastha.googlemap;
+import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
 import android.database.sqlite.SQLiteOpenHelper;
@@ -52,5 +54,8 @@ public class DBHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
+
+
+
 
 }

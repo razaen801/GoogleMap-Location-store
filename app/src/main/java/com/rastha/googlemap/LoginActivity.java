@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     final String[] from = new String[] { DBHelper.USER_ID,
                                         DBHelper.F_NAME,
                                             DBHelper.USERNAME};
-    final int[] to = new int[] { R.id.id, R.id.firstname, R.id.username };
+    final int[] to = new int[] { R.id._id, R.id.firstname, R.id.username };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         Cursor cursor = dbManager.fetch();
         listView = findViewById(R.id.list_view);
         listView.setEmptyView(findViewById(R.id.empty));
-        adapter = new SimpleCursorAdapter(getApplicationContext(), R.layout.activity_view_record, cursor, from, to, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+        adapter = new SimpleCursorAdapter(getApplicationContext(), R.layout.activity_view_record, cursor, from, to, 0);
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

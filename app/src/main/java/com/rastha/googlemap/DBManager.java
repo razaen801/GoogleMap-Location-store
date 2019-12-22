@@ -23,10 +23,6 @@ public class DBManager {
         return this;
     }
 
-    public void close() {
-        dbHelper.close();
-    }
-
     public void insert(String fname, String lname, String addr, String user, String pass, int phone,
                        double lat, double lng) {
         ContentValues contentValue = new ContentValues();
@@ -58,5 +54,41 @@ public class DBManager {
             cursor.moveToFirst();
         }
         return cursor;
+    }
+    public boolean Login(String username, String password) throws SQLException
+    {
+        Cursor mCursor = database.rawQuery("SELECT * FROM " + DBHelper.TABLE_NAME + " WHERE username=? AND password=?", new String[]{username,password});
+        if (mCursor != null) {
+            if(mCursor.getCount() > 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public Cursor fetch_data(String fusername, String fpassword) throws SQLException{
+        Cursor cursor = database.rawQuery("SELECT * FROM " + DBHelper.TABLE_NAME + " WHERE Username=? AND Password=?", new String[]{fusername,fpassword});
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor;
+    }
+    public Cursor fetch_d(String fusername, String fpassword) throws SQLException{
+        final String[] columns = new String[] {
+                DBHelper.USER_ID,
+                DBHelper.F_NAME,
+                DBHelper.L_NAME,
+                DBHelper.ADDRESS,
+                DBHelper.USERNAME,
+                DBHelper.PASSWORD,
+                DBHelper.PHONE,
+                DBHelper.LATITUDE,
+                DBHelper.LONGITUDE};
+        String selection = "Username=" + fusername +" AND Password ="+ fpassword;
+        Cursor cursor= database.query(DBHelper.TABLE_NAME, columns, selection, null, null, null, null);
+    return cursor;
+    }
+    public void close() {
+        dbHelper.close();
     }
 }

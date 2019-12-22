@@ -50,6 +50,7 @@ int phone1 = 0;
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SignupActivity.this,MapsActivity.class));
+                finish();
             }
         });
 
